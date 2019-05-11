@@ -18,3 +18,17 @@ li {margin: 15px 5px; display: inline-block;}
 .content {
     position: absolute;
 }
+
+@media all and (display-mode: standalone) {
+    .App-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 50px;
+        background-color: yellow;
+    }
+    .App-bar::before {
+        content: 'App launched as installed application';
+    }
+}
