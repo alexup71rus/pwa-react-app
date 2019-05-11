@@ -40,6 +40,7 @@ class App extends Component {
                 });
             });
         }
+        this.addToHome();
     }
     addToHome() {
         // Show the prompt
@@ -78,41 +79,37 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <div className="App-bar" />
-                <header className="App-header">
-                    <h1>Experimenting with Desktop PWAs</h1>
+                <div className="bg"><div className="image"></div></div>
+                <div className="content">
+                    <ul>
+                        <li><a href="#" onClick={() =>
+                                this.openWindowOrTab('https://github.com/alexup71rus')
+                            }>Github</a></li>
+                        <li><a href="#" onClick={() =>
+                                this.openWindowOrTab('https://codepen.io/5ubjpogqdv6dcjz/')
+                            }>CodePen</a></li>
+                        <li><a href="#" onClick={() =>
+                                this.openWindowOrTab('https://stackblitz.com/@alexup71rus')
+                            }>StackBlitz</a></li>
+                        <li><a href="#" onClick={() =>
+                                this.openWindowOrTab('https://www.youtube.com/channel/UC9TnazUh1CaQZWrpSf33XZA')
+                            }>YouTube</a></li>
+                        <li><a href="#" onClick={() =>
+                                this.openWindowOrTab('https://kwork.ru/user/alexup71rus')
+                            }>Kwork</a></li>
+                        <li><a href="#" onClick={() =>
+                                this.openWindowOrTab('https://t-do.ru/alexup71rus')
+                            }>Телеграм</a></li>
+                        <li><a href="#" onClick={() =>
+                                this.openWindowOrTab('mailto:admin@khodyr.ru')
+                            }>Почта</a></li>
+                    </ul>
                     {this.shouldShowAddButton() ? (
                         <button onClick={this.addToHome}>
                             Add to Home Screen
                         </button>
                     ) : null}
-                    <a href="https://www.desktop-pwas.com/">Deep link</a>
-                    <a href="https://developers.google.com/web/progressive-web-apps">
-                        PWAs
-                    </a>
-                    <a href="https://developers.google.com/web/progressive-web-apps/desktop">
-                        Desktop PWAs
-                    </a>
-                    <a href="https://developers.google.com/web/fundamentals/app-install-banners/">
-                        Install banners
-                    </a>
-                    <a href="https://developers.google.com/web/fundamentals/web-app-manifest/">
-                        Manifest
-                    </a>
-                    <a href="https://love2dev.com/blog/beforeinstallprompt/">
-                        Understanding beforeinstallprompt
-                    </a>
-                    <a href="chrome://flags/">Chrome Flags</a>
-                    <a onClick={this.openWindowOrTab}>
-                        window.open() in new window/tab for same domain
-                    </a>
-                    <a
-                        onClick={() =>
-                            this.openWindowOrTab('https://www.google.com/')
-                        }>
-                        window.open() in new window/tab for different domain
-                    </a>
-                </header>
+                </div>
             </div>
         );
     }
