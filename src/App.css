@@ -1,32 +1,20 @@
-@media all and (display-mode: standalone) {
-    .App-bar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 50px;
-        background-color: yellow;
-    }
-    .App-bar::before {
-        content: 'App launched as installed application';
-    }
+/*body {background-color: #222; color: #eee; background-attachment: fixed;}*/
+body {background-color: #222; color: #eee; background-image: url(https://source.unsplash.com/800x600/?programming); background-size: cover; background-attachment: fixed;}
+a {color: #aaa;}
+a:visited {color: #777;}
+
+li {margin: 15px 5px; display: inline-block;}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(350deg, transparent -100%, #222 90%);
 }
 
-.App {
-    text-align: center;
-}
-
-.App-header {
-    background-color: #2254b9;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
+.content {
+    position: absolute;
 }
